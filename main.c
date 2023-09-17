@@ -1,17 +1,20 @@
 #include <stdio.h>
-int main() {
-    int n_sets;
-    scanf("%d", &n_sets);
 
-    for (int set_number = 1; set_number <= n_sets; set_number++) {
+int main() {
+    int t; // Количество наборов данных
+    printf("Введите количество наборов данных: ");
+    scanf("%d", &t);
+
+    while (t--) {
         int h, m;
+        printf("Введите время в формате часы минут (hh mm): ");
         scanf("%d %d", &h, &m);
 
         int n_min = (24 - h)*60 - m;
 
-        printf("%d\n", n_min);
+        printf("Осталось %d минут до Нового года.\n", n_min);
     }
 
     return 0;
-
 }
+
